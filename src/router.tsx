@@ -9,7 +9,10 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="users/:id" element={<Modal />} />
+          <Route path="users/:id" element={<Modal />} >
+            <Route index element={<div>User details</div>} />  
+            <Route path="other" element={<div>Other stuff</div>} />  
+          </Route>
           <Route path="messages" element={<Messages />} />
           <Route path="tasks" element={<Tasks />} />
         </Route>
